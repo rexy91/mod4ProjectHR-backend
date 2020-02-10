@@ -3,6 +3,4 @@ class ManagerSerializer < ActiveModel::Serializer
 
   has_many :companies
 
-  url [:companies]
-
 end
