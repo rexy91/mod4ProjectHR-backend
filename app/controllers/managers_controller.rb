@@ -2,6 +2,13 @@ class ManagersController < ApplicationController
     
     before_action :authorized, only: [:persist]
 
+    def index 
+        # Index page will show all managers, as well as the associated objects.
+        @managers = Manager.all
+
+        render json: @managers, include: 'companies'
+    end
+
     def show
         @manager = Manager.find_by(id: params[:id])
         render json: {manager: ManagerSerializer.new(@manager)}
