@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   post '/login', to: 'managers#login'
   get '/persist', to: 'managers#persist'
+  
   resources :employees
   resources :companies
   resources :managers

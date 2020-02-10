@@ -12,8 +12,8 @@ Company.destroy_all
 Employee.destroy_all
 
 
-m1 = Manager.create(name:'Saima', username:'saima2020', password:'12345')
-m2 = Manager.create(name:'Jo', username:'jo2020', password:'12345')
+m1 = Manager.create(firstName:'Saima', lastName:'Raman' , username:'saima2020', password:'12345',email:'saimaraman@flatiron.com')
+m2 = Manager.create(firstName:'Jo', lastName:'Pyram',username:'jo2020', password:'12345', email:'jopryam@flatiron.com')
 
 c1 = Company.create(name: 'Plantpedia', manager: m1, staff_count: 57 )
 c2 = Company.create(name: 'Instagram', manager: m2, staff_count: 38 )

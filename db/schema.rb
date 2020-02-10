@@ -35,7 +35,9 @@ ActiveRecord::Schema.define(version: 2020_02_07_204905) do
   end
 
   create_table "managers", force: :cascade do |t|
-    t.string "name"
+    t.string "firstName"
+    t.string "lastName"
+    t.string "email"
     t.string "password_digest"
     t.string "username"
     t.datetime "created_at", precision: 6, null: false
