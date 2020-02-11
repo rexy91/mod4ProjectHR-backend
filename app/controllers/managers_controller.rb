@@ -15,6 +15,7 @@ class ManagersController < ApplicationController
     end
 
     def login 
+        byebug 
         @manager= Manager.find_by(username: params[:username])
       
         if @manager && @manager.authenticate(params[:password])
