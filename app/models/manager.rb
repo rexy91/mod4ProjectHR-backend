@@ -1,5 +1,5 @@
 class Manager < ApplicationRecord
-    has_many :companies
+    has_many :companies, dependent: :destroy
     has_many :employees, through: :companies
     has_secure_password 
     validates :username, :firstName, :lastName, :password, :email, presence: true

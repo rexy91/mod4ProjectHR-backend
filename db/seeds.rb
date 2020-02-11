@@ -21,5 +21,10 @@ c3 = Company.create(name: 'FaceLook', manager: m1, staff_count: 343 )
 c4 = Company.create(name: 'Instabam', manager: m1, staff_count: 3843 )
 
 
-e1 = Employee.create(company: c1, name: 'rex', date_of_birth: 'yesterday', email: 'hello')
-e2 = Employee.create(company: c2, name: 'rex', date_of_birth: 'yesterday', email: 'hello')
+e1 = Employee.create(company: c1, name: 'rex', date_of_birth: 'yesterday', email: 'rex@yahoo.com')
+e2 = Employee.create(company: c1, name: 'jonathan', date_of_birth: 'yesterday', email: 'jonathan@gmail.com')
+e3 = Employee.create(company: c1, name: 'Valentine', date_of_birth: 'yesterday', email: 'valentine@hotmail.com')
+e4 = Employee.create(company: c1, name: 'Alex', date_of_birth: 'yesterday', email: 'Alex@msn.com')
+e5 = Employee.create(company: c1, name: 'Mohammed', date_of_birth: 'yesterday', email: 'Mohammed@aol.com')
+
+e6 = Employee.create(company: c2, name: 'rex', date_of_birth: 'yesterday', email: 'hello')
