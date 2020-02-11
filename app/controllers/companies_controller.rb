@@ -11,4 +11,17 @@ class CompaniesController < ApplicationController
         render json: @company
     end
 
+    def create 
+        # byebug
+        @company = Company.create(create_company_params)
+        if @company.valid?
+            render json: @company
+        end
+    end
+
+    private 
+
+    def create_company_params
+        params.permit(:name, :manager_id)
+    end
 end

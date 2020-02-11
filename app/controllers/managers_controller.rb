@@ -28,7 +28,7 @@ class ManagersController < ApplicationController
     end
 
     def create
-        byebug
+        # byebug
         @manager = Manager.create(new_manager_params)
         if @manager.valid?
             wristband = encode_token({user_id: @manager.id})
