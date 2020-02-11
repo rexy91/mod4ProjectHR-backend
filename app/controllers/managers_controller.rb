@@ -15,7 +15,6 @@ class ManagersController < ApplicationController
     end
 
     def login 
-        
         @manager= Manager.find_by(username: params[:username])
       
         if @manager && @manager.authenticate(params[:password])
@@ -28,13 +27,15 @@ class ManagersController < ApplicationController
     end
 
     def create
-        byebug
+        
         @manager = Manager.create(new_manager_params)
+        # byebug 
+        # @manager.errors.full_messages
         if @manager.valid?
             wristband = encode_token({user_id: @manager.id})
             render json: {user: ManagerSerializer.new(@manager), token: wristband}
         else 
-            render json: {error: "Invalid username or password"}
+            render json: {errors: @manager.errors.full_messages}
         end
     end
 
