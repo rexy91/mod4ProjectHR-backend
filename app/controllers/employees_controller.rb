@@ -7,6 +7,13 @@ class EmployeesController < ApplicationController
         end
     end
 
+    def destroy
+        # byebug
+        @employee = Employee.find_by(id: params[:id])
+        @employee.destroy
+        render json: {message: 'employee destroyed'}
+    end
+
     private
 
     def create_employee_params 

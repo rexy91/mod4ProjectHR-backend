@@ -19,6 +19,13 @@ class CompaniesController < ApplicationController
         end
     end
 
+    def update 
+        # byebug
+        @company = Company.find_by(id: params[:id])
+        @company.update(schedule: params[:schedule])
+        render json: @company
+    end
+
     private 
 
     def create_company_params

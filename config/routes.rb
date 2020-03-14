@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/persist', to: 'managers#persist'
   post '/new_employee', to: 'employees#create'
   post '/new_company', to: 'companies#create'
+  
+
   resources :employees
   resources :companies
   resources :managers
