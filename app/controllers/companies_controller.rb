@@ -26,6 +26,10 @@ class CompaniesController < ApplicationController
         render json: @company
     end
 
+    def destroy
+        byebug
+    end
+
     private 
 
     def create_company_params
