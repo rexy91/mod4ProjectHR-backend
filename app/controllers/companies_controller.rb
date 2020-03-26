@@ -27,7 +27,11 @@ class CompaniesController < ApplicationController
     end
 
     def destroy
-        byebug
+        # byebug
+        @company = Company.find_by(id: params[:id])
+        @company.destroy
+        render json: {message: 'Successful Delete'}
+        #set up route!
     end
 
     private 
