@@ -1,12 +1,12 @@
 class ManagersController < ApplicationController
     
-    before_action :authorized, only: [:persist]
+    before_action :authorized, only: [:persist, :index]
 
     def index 
         # Index page will show all managers, as well as the associated objects.
-        @managers = Manager.all
+        byebug
 
-        render json: @managers, include: 'companies'
+        render json: @user, include: 'companies'
     end
 
     def show

@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
 
+    before_action :authorized, only: [:create]
     def index 
         @companies = Company.all 
         render json: @companies, include: 'employees'
@@ -12,7 +13,7 @@ class CompaniesController < ApplicationController
     end
 
     def create 
-        # byebug
+        
         @company = Company.create(create_company_params)
         if @company.valid?
             render json: @company
