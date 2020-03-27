@@ -13,7 +13,7 @@ class CompaniesController < ApplicationController
     end
 
     def create 
-        
+        # byebug
         @company = Company.create(create_company_params)
         if @company.valid?
             render json: @company

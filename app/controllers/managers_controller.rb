@@ -4,7 +4,7 @@ class ManagersController < ApplicationController
 
     def index 
         # Index page will show all managers, as well as the associated objects.
-        byebug
+        
 
         render json: @user, include: 'companies'
     end
